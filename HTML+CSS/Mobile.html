@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Response</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    header{
+      background-color: aqua;
+      color: black;
+      text-align: center;
+      width: 100%;
+      position: fixed;
+      top: 0;
+    }
+    footer {
+      background-color: aqua;
+      color: black;
+      text-align: center;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+    }
+    div{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 100px; 
+    }
+    main{
+      padding: 20px;
+      flex: 1; 
+    }
+
+    nav {
+      background-color: rgb(245, 127, 132);
+      color: white;
+      width: 300px; 
+      margin: 10px; 
+    }
+
+    ul li a {
+      text-decoration: none;
+    }
+
+    ul li a:hover {
+      color: white;
+    }
+
+    @media screen and (max-width: 620px) {
+      nav {
+        width: 100%; 
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Responsive Web Designing</h1>
+  </header>
+  <div>
+    <nav>
+      <ul>
+        <li><a href="#">HTML Introduction</a></li>
+        <li><a href="#">HTML Heading Tags</a></li>
+        <li><a href="#">HTML Attributes</a></li>
+        <li><a href="#">HTML Navigation Element</a></li>
+        <li><a href="#">HTML Caption Element</a></li>
+        <li><a href="#">HTML Aside Element</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h4>Welcome to Introduction to HTML</h4>
+      <p>HTML is a markup language that defines the structure of your content. HTML consists of a series of elements,
+        which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a
+        certain way. The enclosing tags can make a word or image hyperlink to somewhere else, can italicize words, can
+        make the font bigger or smaller, and so on. For example, take the following line of content:
+        The main parts of our element are as follows:
+
+        The opening tag: This consists of the name of the element (in this case, p), wrapped in opening and closing
+        angle brackets. This states where the element begins or starts to take effect — in this case where the paragraph
+        begins.
+      </p>
+    </main>
+    <nav>
+      <ul>
+        <li><a href="#">HTML Introduction</a></li>
+        <li><a href="#">HTML Heading Tags</a></li>
+        <li><a href="#">HTML Attributes</a></li>
+        <li><a href="#">HTML Navigation Element</a></li>
+        <li><a href="#">HTML Caption Element</a></li>
+        <li><a href="#">HTML Aside Element</a></li>
+      </ul>
+    </nav>
+  </div>
+  <footer> &copy; Deepika</footer>
+</body>
+
+</html>

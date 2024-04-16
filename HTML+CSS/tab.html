@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .tabs-container {
+      display: flex;
+      cursor: pointer;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      width: 400px;
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      border-radius: 5px 5px 0 0;
+      margin-right: -1px;
+     align-items: center;
+    }
+
+    
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 0 5px 5px 5px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="tabs-container">
+  <div class="tab" onclick="openTab(event, 'tab1')">Tab 1</div>
+  <div class="tab" onclick="openTab(event, 'tab2')">Tab 2</div>
+  <div class="tab" onclick="openTab(event, 'tab3')">Tab 3</div>
+</div>
+
+<div id="tab1" class="tab-content">
+  <h2>Content for Tab 1</h2>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores rerum alias minus debitis provident nisi, ut quibusdam numquam esse quaerat saepe nostrum, velit voluptate perspiciatis!</p>
+</div>
+
+<div id="tab2" class="tab-content">
+  <h2>Content for Tab 2</h2>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus veniam iure dignissimos magnam fugiat laboriosam libero assumenda vero voluptatibus nobis perspiciatis, aut reiciendis. Nemo, quasi.</p>
+</div>
+
+<div id="tab3" class="tab-content">
+  <h2>Content for Tab 3</h2>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet corporis perspiciatis magni tempore aspernatur a dolorem dicta accusantium. Rerum cumque repellat deleniti ex eum quisquam.</p>
+</div>
+
+<script>
+  function openTab(event, tabName) {
+    var i, tabContent, tabLinks;
+    tabContent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabContent.length; i++) {
+      tabContent[i].style.display = "none";
+    }
+    tabLinks = document.getElementsByClassName("tab");
+    for (i = 0; i < tabLinks.length; i++) {
+      tabLinks[i].style.backgroundColor = "#f1f1f1";
+    }
+    document.getElementById(tabName).style.display = "block";
+    event.currentTarget.style.backgroundColor = "#ddd";
+  }
+</script>
+</body>
+</html>

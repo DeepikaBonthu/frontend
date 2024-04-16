@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Favourite Food</title>
+        <style>
+            body{
+                background-color: darkslategray;
+            }
+            .food{
+                width: 400px;
+                height: 300px;
+                margin: 100px auto;
+                border-radius: 10px;
+                box-shadow:0 5px 10px black ;
+                position: relative;
+                overflow: hidden;
+            }
+            .food img{
+                width: inherit;
+                height: inherit;
+                border-radius: 0 10px 10px 0;
+                transform: translateX(50%);
+                transition: all 0.5s;
+            }
+            .food:hover img{
+                transform: translateX(0%);
+            }
+            .food .content{
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-family: 'Courier New', Courier, monospace;
+                background: linear-gradient(45deg,blueviolet,rgb(179, 36, 60));
+                width: 50%;
+                height: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                border-radius: 10px 0 0 10px;
+                transform: translateX(0%);
+                transition: all 0.5s;
+            }
+            .food:hover .content{
+                transform: translateX(-100%);
+
+            }
+            .food .content p{
+                font-size:18px ;
+
+            }
+
+        </style>
+        <body>
+        <div class="food">
+            <img src="fresh-vada-pav.jpg" alt="">
+            <div class="content">
+                <h2>Food I Love</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur to officiis quia dolorem? Qui ad necessitatibus placeat quasi numquam error.</p>
+            </div>
+        </div>
+    </body>
+</html>

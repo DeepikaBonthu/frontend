@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Registration</title>
+        <style>
+            h1{
+                border-radius: 50%;
+                color: brown;
+                display: inline-block;
+                text-align: center;
+                margin: 20px;
+                background-color: greenyellow;
+            }
+            form{
+                border: 2px solid gray;
+                padding: 20px;
+                color:red;
+                width: 25%;
+                border-radius: 10px;
+                margin: 20px;
+                text-align: justify;
+                background-color: bisque;
+                margin-left: 20px;
+                cursor: pointer;
+
+            }
+            .changeColor:hover{
+                background-color: yellow;
+            }
+            
+        </style>
+        </head>
+    <body>
+        <h1> Login Form</h1>
+        <form>
+
+            First Name:<input type="text" name="fname"><br>
+            Last Name:<input type="text" name="lname"><br>
+            Email Id:<input type="mail" name="email"><br>
+            Password:<input type="password" name="pswd"><br>
+            Gender:<input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female<br>
+            Mobile Number:<input type="tel" id="phone" name="phone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <br>
+            City:<select name="city" id="city">
+                <option value="none" selected disabled hidden>select one option</option>
+                <option  value="hyd">Hyd</option>
+                <option value="delhi">Delhi</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="chennai">Chennai</option></select><br>
+            State:<select name="state" id="state">
+                <option value="none" selected disabled hidden>select one option</option>
+                <option value="Ap">AP</option>
+                <option value="TS">TS</option>
+                <option value="Maharastra">Maharastra</option>
+                <option value="Tamilnadu">Tamilnadu</option>
+                <option value="Delhi">Delhi</option></select><br>
+            Hobbies:<input type="checkbox" name="hobbies" value="games">Games
+            <input type="checkbox" name="hobbies" value="watching TV">Watching TV
+            <input type="checkbox" name="hobbies" value="reading books"> Reading Books<br>
+            Education Qualification:<select name="Education" id="Education">
+                <option value="none" selected disabled hidden>select option</option>
+                <option value="SSC">SSC</option>
+                <option value="Inter">Inter</option>
+                <option value="Diploma">Diploma</option>
+                <option value="UG">UG</option>
+                <option value="PG">PG</option>
+            </select><br>
+            <button class="changeColor">Register</button>
+             </form>
+         
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Timeline with Check Circles</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-df0jqrw5lMEBrclFz0Uutg+ttLZQxY3w9W+gDfPz9qMol7IItD6tuYcB8UUC8XFP" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .timeline {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .timeline-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .check-circle {
+      font-size: 24px;
+      margin-right: 20px;
+      color: #2ecc71; /* Green color */
+    }
+
+    .timeline-content {
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <ul class="timeline">
+    <li class="timeline-item">
+      <i class="fas fa-check-circle check-circle"></i>
+      <div class="timeline-content">
+        <h3>Step 1</h3>
+        <p>Description for Step 1</p>
+      </div>
+    </li>
+
+    <li class="timeline-item">
+      <i class="fas fa-check-circle check-circle"></i>
+      <div class="timeline-content">
+        <h3>Step 2</h3>
+        <p>Description for Step 2</p>
+      </div>
+    </li>
+
+    <!-- Repeat the above list item structure for each step -->
+
+  </ul>
+
+</body>
+</html>

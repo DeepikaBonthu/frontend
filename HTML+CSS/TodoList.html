@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color:black;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 5px;
+      
+    }
+    #addTodoBtn{
+      height: 48px;
+      background-color:#a0a4d9;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #todoInput {
+      height: 48px;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+     
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border: 1px solid #efefef;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+
+    .remove-btn {
+      background-color: #a0a4d9;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    label{
+      font-weight: bold;
+      margin-bottom: 5px;
+     
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+  
+      <h1>ToDo App</h1>
+      <label>New ToDo</label>
+      <input type="text" id="todoInput" label="New todo">
+      <button id="addTodoBtn">Add ToDo</button>
+      <h3>ToDo List</h3>
+      <ul id="todoList"></ul>
+    
+  </div>
+
+  <script>
+    const todoInput = document.getElementById('todoInput');
+    const todoList = document.getElementById('todoList');
+    const addTodoBtn = document.getElementById('addTodoBtn');
+
+    
+    const createTodoItem = (text) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+      <span>${text}</span>
+      <button class="remove-btn" onclick="removeTodoItem(event)">Remove</button>
+    `;
+      return li;
+    };
+    const addTodoItem = () => {
+      const text = todoInput.value.trim();
+      if (text !== '') {
+        const todoItem = createTodoItem(text);
+        todoList.appendChild(todoItem);
+        todoInput.value = '';
+      }
+    };
+    const removeTodoItem = (event) => {
+      const todoItem = event.target.parentElement;
+      todoList.removeChild(todoItem);
+    };
+    addTodoBtn.addEventListener('click', addTodoItem);
+  </script>
+
+</body>
+
+</html>
