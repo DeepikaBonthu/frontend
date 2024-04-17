@@ -1,0 +1,47 @@
+/* src/App.css */
+.App {
+  text-align: center;
+}
+
+.calendar {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.days-of-week {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+  padding: 5px;
+}
+
+.cells {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-collapse: collapse;
+  gap: 5px;
+}
+
+.cell {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.disabled {
+  color: #aaa;
+}
+
+.date {
+  font-size: 18px;
+}
+
+.festivals {
+  margin-top: 5px;
+}
+
+.festival {
+  color: #ff6347; /* Tomato color for festivals */
+  font-weight: bold;
+}

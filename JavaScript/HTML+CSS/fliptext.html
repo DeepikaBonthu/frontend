@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flip text on Image</title>
+        <style>
+            .container{
+                width: 350px;
+                height: 250px;
+                margin: 100px auto;
+                position: relative;
+                border-radius: 10px;
+                box-shadow: 0 5px 10px black;
+                overflow: hidden;
+                
+            }
+            .container img{
+                width: inherit;
+                height: inherit;
+                background: 10px;
+                border-radius: 10px;
+                transition: all 0.5s;
+            }
+            .container .content{
+                position: absolute;
+                top: 0;
+                color: white;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background-color: rgba(0, 0, 0, 0.5);
+                width: 50%;
+                height: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                transform: perspective(400px) rotateY(45deg);
+                transform-origin: left;
+                border-radius: 10px;
+                transition: all 0.5s;
+              
+            }
+            .container:hover .content{
+                transform:  perspective(400px) rotateY(0deg);
+            }
+            
+             
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="images children.jpeg" alt="Children Image">
+            <div class="content">
+                <h2>Children</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis amet asperiores aut, provident possimus ratione incidunt aperiam libero minus modi?</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Capitalize Textbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #inputBox {
+      padding: 10px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  Name<input type="text" id="inputBox" oninput="capitalizeText()">
+  <script>
+    function capitalizeText() {
+      var inputBox = document.getElementById('inputBox');
+      inputBox.value = inputBox.value.toUpperCase();
+    }
+  </script>
+</body>
+</html>

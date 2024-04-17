@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="table.css">
+
+    <script src="table.js"></script>
+</head>
+<body>
+    <div  class="container">
+        <div class="row-mt-5">
+            <div class="row-md-3">
+                <label for="laptopName">Enter Laptop Name:</label>
+                <input type="text" class="form-control" id="laptopName">
+            </div>
+            <div class="row-md-3">
+                <label for="model">Enter Model No:</label>
+                <input type="text" class="form-control" id="model">
+            </div>
+            <div class="row-md-3">
+                <label for="price">Cost:</label>
+                <input type="text" class="form-control" id="price">
+            </div>
+            <div class="row-md-3">
+                <label for="ram">RAM:</label>
+                <input type="text" class="form-control" id="ram">
+            </div>
+        </div>
+        
+
+        <div class="row-mt-5">
+            <div class="col-md-12 text-center">
+                <button type="button" id="btn-lappy" class="btn btn-sucess" onclick="addonClick()">Add</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div id="table"></div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Form</title>
+        "<link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <style>
+            .register{
+                font-family: Arial, Helvetica, sans-serif;
+                background: linear-gradient(45deg,blueviolet,deeppink);
+                width: 300px;
+                color: white;
+                padding: 15px;
+                margin:50px auto;
+            }
+            .register h2{
+                font-size: 30px;
+                text-align: center;
+
+            }
+            .form-group label{
+                display: block;
+                margin: 10px 0;
+
+            }
+            .form-control{
+                font-size: 18px;
+                height:35px;
+                outline: none;
+                border: none;
+                width: 290px;
+            }
+            .submit-btn{
+                margin: 15px 0;
+                background: linear-gradient(45deg,blueviolet,deeppink );
+                color: white;
+                font-size: 18px;
+                padding:12px  25px;
+                width:290px ;
+                border: none;
+                box-shadow:0 5px 10px black ;
+
+            }
+
+            
+
+
+        </style>
+    </head>
+    <body>
+        <div class="register">
+            <i class="fa-sharp fa-light fa-user">
+           <h2>Register Here</h2>
+           <form class="register-form">
+            
+            <div class="form-group">
+                <label>User Name</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Designation</label>
+                <select class="form-control">
+                    <option value="">Select a Designation</option>
+                    <option value=""> Backend Developer</option>
+                    <option value="">UI Developer</option>
+                    <option value="">Tester</option>
+                    <option value="">Flutter</option>
+                    <option value="">Full Stack Developer</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Register" class="submit-btn">
+            </div>
+           </form>
+        </div>
+    </body>
+</html>

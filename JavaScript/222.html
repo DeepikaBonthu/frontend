@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jewelry Store</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-weight: bold;
+}
+
+.product-price {
+    color: green;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container" id="jewelry-container"></div>
+
+    <script>
+        const jewelryContainer = document.getElementById('jewelry-container');
+
+fetch('https://fakestoreapi.com/products/category/jewelery')
+    .then(res => res.json())
+    .then(products => {
+        products.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'product-card';
+
+            const productImage = document.createElement('img');
+            productImage.src = product.image;
+            productImage.alt = product.title;
+            productImage.className = 'product-image';
+
+            const productTitle = document.createElement('div');
+            productTitle.className = 'product-title';
+            productTitle.textContent = product.title;
+
+            const productPrice = document.createElement('div');
+            productPrice.className = 'product-price';
+            productPrice.textContent = `$${product.price}`;
+
+            productCard.appendChild(productImage);
+            productCard.appendChild(productTitle);
+            productCard.appendChild(productPrice);
+
+            jewelryContainer.appendChild(productCard);
+        });
+    })
+    .catch(error => console.error('Error fetching jewelry products:', error));
+
+
+    </script>
+</body>
+
+</html>

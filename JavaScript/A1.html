@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Udemy website</title>
+        <style>
+            p,div{
+                font-family: var(--font-stack-heading);
+                font-weight:bold;
+                text-align: center;
+                margin: 100px;
+                font-size: larger;
+            }
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            button{
+                padding: 10px;
+                text-align: justify;
+                font-size: larger;
+            }
+                
+                
+             
+        </style>
+    </head>
+    <body>
+        <p>Log in to your Udemy Account</p>
+        <div>
+            <button onclick="myFunction()">
+                <img src="Google.png">Continue with Google</button>
+        </div>
+        <script>
+            function myFunction() {
+            window.open("https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?gsiwebsdk=3&client_id=700206021005-as1l679sch207mp70msgjhma1krf3k9q.apps.googleusercontent.com&scope=email%20profile&redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.udemy.com%3Fid%3Dauth711451&prompt=consent&access_type=offline&response_type=code&include_granted_scopes=true&enable_granular_consent=true&service=lso&o2v=2&theme=glif&flowName=GeneralOAuthFlow");
+            }
+        </script>
+       
+    </body>
+</html>

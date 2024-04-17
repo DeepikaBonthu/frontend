@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Inventory</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form input {
+    margin: 5px;
+    padding: 8px;
+}
+
+.form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Laptop Inventory</h1>
+        <div class="form">
+            <input type="text" id="laptopName" placeholder="Laptop Name">
+            <input type="text" id="laptopModel" placeholder="Laptop Model">
+            <input type="number" id="laptopPrice" placeholder="Price">
+            <input type="text" id="laptopRAM" placeholder="RAM">
+            <button onclick="addLaptop()">Add Laptop</button>
+        </div>
+        <table id="laptopTable">
+            <thead>
+                <tr>
+                    <th>Laptop Name</th>
+                    <th>Model</th>
+                    <th>Price</th>
+                    <th>RAM</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <script>
+
+const laptopTable = document.getElementById('laptopTable');
+const tableBody = document.getElementById('tableBody');
+
+function addLaptop() {
+    const laptopName = document.getElementById('laptopName').value;
+    const laptopModel = document.getElementById('laptopModel').value;
+    const laptopPrice = document.getElementById('laptopPrice').value;
+    const laptopRAM = document.getElementById('laptopRAM').value;
+
+    if (laptopName && laptopModel && laptopPrice && laptopRAM) {
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td>${laptopName}</td>
+            <td>${laptopModel}</td>
+            <td>$${laptopPrice}</td>
+            <td>${laptopRAM}</td>
+            <td><button onclick="deleteLaptop(this)">Delete</button></td>
+        `;
+
+        tableBody.appendChild(newRow);
+
+        // Clear input fields after adding a laptop
+        document.getElementById('laptopName').value = '';
+        document.getElementById('laptopModel').value = '';
+        document.getElementById('laptopPrice').value = '';
+        document.getElementById('laptopRAM').value = '';
+    }
+}
+
+function deleteLaptop(button) {
+    const row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+}
+
+
+    </script>
+</body>
+
+</html>
